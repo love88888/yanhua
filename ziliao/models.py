@@ -25,7 +25,7 @@ class Category(AbstractCategory):
     name = models.CharField(verbose_name=u"名称", max_length=50, unique=True)
     name_full = models.CharField(verbose_name=u"全名", max_length=200 ,blank=True)
     note_lable = models.CharField(verbose_name=u"备注", max_length=200)
-    image = models.ImageField(upload_to=category_image_path, height_field=None, width_field=None, max_length=100,verbose_name=u"封面")
+    image = models.ImageField(upload_to=category_image_path, default='ziliao/static/image/category/default.jpg', height_field=None, width_field=None, max_length=100,verbose_name=u"封面")
     creat_datetime = models.DateTimeField(verbose_name=u"创建时间",auto_now_add=True)
     update_datetime = models.DateTimeField(verbose_name=u"修改时间",auto_now=True)
 
