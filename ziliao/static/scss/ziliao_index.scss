@@ -1,0 +1,67 @@
+a,abbr,address,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,
+form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,label,legend,li,object,ol,p,pre,q,small,
+span,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,ul{border:0;margin:0;padding:0}
+a{
+    text-decoration: none;
+    color: rgb(131, 89, 89);
+    font-size: 1em;
+    &:hover{
+        color: rgb(104, 43, 43);
+        font-size: 1.01em;
+    }
+}
+ul,ol{list-style: none;}
+
+$base-bg:#f6f6f6;
+$base-color-font: rgb(36, 32, 32);
+$base-color-main: rgb(89, 70, 94);
+$base-border:2px solid rgb(127, 142, 165);
+$base-border-input-checked:3px solid rgb(90, 141, 214);
+$base-border-radius:3px;
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: $base-bg;
+    font-size: 1.2em;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+}
+
+
+@mixin logo{
+    .logo {
+        width: 200px;
+        height: 50px;
+        background:#ffffff url('/static/ziliao/img/logo.png') no-repeat right top;
+    }
+    
+}
+
+
+@mixin header{
+    header {
+        background-color: red;
+        min-height: 10em;
+        @include logo;
+    }
+}
+@mixin footer{
+    footer {
+        background-color: rgb(104, 31, 126);
+        min-height: 10em;
+    }
+}
+
+#ziliao_index {
+    @include header;
+    @include footer;
+}
+
+
+
+
+
+
+

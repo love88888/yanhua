@@ -1,0 +1,62 @@
+{% load static %}
+	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+    <script type = "text/javascript" src ={% static 'index/js/jQuery-3-4-1.min.js' %} ></script>
+<style>
+    div{
+        text-align: center;
+        padding: 30px 50px;
+    }
+    .timeout{
+        margin: 0 auto;
+    }
+    .timeout span{
+        display: inline-block;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    #timeout {
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <div class="timeout">
+            <span>返回中</span><span id="timeout">6</span><span>s</span>
+        </div>
+    </div>
+    <div>
+        {% if order %}
+            {% for k,v in order.items %}
+            <h3>{{ k }}:{{ v }}</h3>
+            {% endfor %}
+        {% elif msg %}
+            <h2>{{ msg }}</h2>
+        {% else %}
+            <h2>无消息</h2>
+        {% endif %}
+    </div>
+
+<script>
+    (function(){
+        var time = 6;
+        setInterval(function(){
+            --time;
+            if (time==0){
+                window.history.go(-3);
+            }
+            $('#timeout').text(time);
+        },1000);
+    })()
+</script>
+
+    
+</body>
+</html>

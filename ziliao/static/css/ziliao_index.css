@@ -1,0 +1,38 @@
+a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset,
+form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, label, legend, li, object, ol, p, pre, q, small,
+span, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, ul {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #835959;
+  font-size: 1em; }
+  a:hover {
+    color: #682b2b;
+    font-size: 1.01em; }
+
+ul, ol {
+  list-style: none; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #f6f6f6;
+  font-size: 1.2em;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif; }
+
+#ziliao_index header {
+  background-color: red;
+  min-height: 10em; }
+  #ziliao_index header .logo {
+    width: 200px;
+    height: 50px;
+    background: #ffffff url("/static/ziliao/img/logo.png") no-repeat right top; }
+#ziliao_index footer {
+  background-color: #681f7e;
+  min-height: 10em; }
+
+/*# sourceMappingURL=ziliao_index.css.map */
