@@ -34,12 +34,10 @@ h2 {
 /* l--wrapper */
 .l--wrapper {
     position: absolute;
-    top: 25rem;
+    top: 4em;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
-    height: 20rem;
   }
   
   svg {
@@ -68,17 +66,8 @@ h2 {
 /*general*/
 #main-wrapper {
      overflow: hidden;
+     height: 100%;
 }
-
-.active {
-    display: block;
-}
-
-.inactive {
-    /* left: 703px; */
-    display: none;
-}
-
 
 
 .templatemo-content {
@@ -179,14 +168,3 @@ h2 {
     color: rgb(66, 18, 105);
 }
 
-@media (max-width: 991px) {
-    .footer {
-        overflow:hidden; 
-        position:static;
-        text-align: center;
-    }
-    
-    .footer-text {
-        margin-left: 0;  
-    }
-}

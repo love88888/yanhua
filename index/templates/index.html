@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -11,10 +12,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href={% static 'index/css/bootstrap.min.css' %}>
+        <link rel="stylesheet" href={% static 'index/css/font-awesome.min.css' %}>
+        <link rel="stylesheet" href={% static 'index/css/index.css' %}>
     </head>
     <body>
         
@@ -24,29 +24,28 @@
                 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="#/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
             <![endif]-->
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo">
+
                     <div class="l--wrapper">
                         <svg>
                               <pattern id="pt--water" viewBox="0 0 256 256"
                                   width="256" height="256" patternUnits="userSpaceOnUse">
-                                <image xlink:href="images/0_835bb_35485e4a_XL.gif" width="256" height="256"/>
+                                <image xlink:href={% static 'index/img/0_835bb_35485e4a_XL.gif' %} width="256" height="256"/>
                               </pattern>
                         
                               <pattern id="pt--fire" viewBox="30 100 186 200"
                                   width="216" height="200" patternUnits="userSpaceOnUse"
                                       x="-60" y="-100">
-                                <image xlink:href="images/0_835bc_b77f8d28_orig.gif" width="256" height="300"/>
+                                <image xlink:href={% static 'index/img/0_835bc_b77f8d28_orig.gif' %} width="256" height="300"/>
                               </pattern>
 
                               <text x="38%" y="155" class="t--water" text-anchor="middle">Yan</text>
                               <text x="60%" y="155" class="t--fire" text-anchor="middle">Hua</text>
                         </svg>
                     </div>
-                    <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
-            </div>
+
 
             <div class="container">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
                     <div class="templatemo-content">
                         
                         <section id="menu-section" class="active">
@@ -113,6 +112,7 @@
 
 		</div><!-- /#main-wrapper -->
         <script>
+                document.o
                 function initVars(){
                 
                     pi=Math.PI;
