@@ -19,29 +19,25 @@
     <body>
         
         <div id="main-wrapper">
-        <canvas id="canvas"></canvas>    
+            <canvas id="canvas"></canvas>    
             <!--[if lt IE 7]>
                 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="#/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
             <![endif]-->
-
-
-                    <div class="l--wrapper">
-                        <svg>
-                              <pattern id="pt--water" viewBox="0 0 256 256"
-                                  width="256" height="256" patternUnits="userSpaceOnUse">
-                                <image xlink:href={% static 'index/img/0_835bb_35485e4a_XL.gif' %} width="256" height="256"/>
-                              </pattern>
-                        
-                              <pattern id="pt--fire" viewBox="30 100 186 200"
-                                  width="216" height="200" patternUnits="userSpaceOnUse"
-                                      x="-60" y="-100">
-                                <image xlink:href={% static 'index/img/0_835bc_b77f8d28_orig.gif' %} width="256" height="300"/>
-                              </pattern>
-
-                              <text x="38%" y="155" class="t--water" text-anchor="middle">Yan</text>
-                              <text x="60%" y="155" class="t--fire" text-anchor="middle">Hua</text>
-                        </svg>
-                    </div>
+            <div class="l--wrapper">
+                <svg>
+                    <pattern id="pt--water" viewBox="0 0 256 256"
+                        width="220" height="236" patternUnits="userSpaceOnUse">
+                        <image xlink:href={% static 'index/img/0_835bb_35485e4a_XL.gif' %} width="256" height="256"/>
+                    </pattern>
+                    <pattern id="pt--fire" viewBox="30 100 186 200"
+                        width="147" height="172" patternUnits="userSpaceOnUse"
+                            x="-60" y="-100">
+                        <image xlink:href={% static 'index/img/0_835bc_b77f8d28_orig.gif' %} width="256" height="300"/>
+                    </pattern>
+                    <text x="30%" y="30%" class="t--water" text-anchor="middle">Yan</text>
+                    <text x="70%" y="30%" class="t--fire" text-anchor="middle">Hua</text>
+                </svg>
+            </div>
 
 
             <div class="container">
@@ -51,49 +47,49 @@
                         <section id="menu-section" class="active">
                             <div class="row">
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#products" class="change-section">
+                                    <a href="/ziliao/" class="change-section">
                                         <div class="black-bg btn-menu">
-                                            <i class="fa fa-cubes"></i>
-                                            <h2>Products</h2>
+                                            <i class="fa fa-book"></i>
+                                            <h2>Documents</h2>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#services" class="change-section">
+                                    <a href="/payment/" class="change-section">
                                         <div class="black-bg btn-menu">
-                                            <i class="fa fa-laptop"></i>
-                                            <h2>Services</h2>
+                                            <i class="fa fa-cc-paypal"></i>
+                                            <h2>Payment</h2>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#about" class="change-section">
+                                    <a href="/video/" class="change-section">
                                         <div class="black-bg btn-menu">
-                                            <i class="fa fa-users"></i>
-                                            <h2>About</h2>
+                                            <i class="fa fa-youtube-play"></i>
+                                            <h2>Video</h2>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
                                     <a href="#contact" class="change-section">
                                         <div class="black-bg btn-menu">
-                                            <i class="fa fa-envelope"></i>
-                                            <h2>Contact</h2>
+                                            <i class="fa fa-users"></i>
+                                            <h2>About</h2>
                                         </div>
                                     </a>
                                 </div>
                             
                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                    <a href="#company-intro" class="change-section">
+                                    <a href="/user/" class="change-section">
                                         <div class="black-bg btn-menu">
-                                            <h2>Introduction to Company</h2>
+                                            <h2>Membership Center</h2>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                    <a href="#testimonials" class="change-section">
+                                    <a href="/admin/" class="change-section">
                                         <div class="black-bg btn-menu">
-                                            <h2>Testimonials and Awards</h2>
+                                            <h2>Back-stage Management</h2>
                                         </div>
                                     </a>
                                 </div>

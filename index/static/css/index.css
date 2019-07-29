@@ -34,24 +34,23 @@ h2 {
 /* l--wrapper */
 .l--wrapper {
     position: absolute;
-    top: 4em;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
   }
   
-  svg {
+svg {
     width: 100%;
-    height: 20rem;
-    /*   border: 1px solid red; */
-  }
+    height: 100%;
+}
   
-  text {
+text {
     stroke-width: 10;
     stroke-opacity: .5;
-    font-family: 'Francois One', sans-serif;
-    font-size: 10rem;
-  }
+    font-family: fantasy;
+    font-size: 9em;
+}
   
   .t--water {
     fill: url(#pt--water);
@@ -71,9 +70,8 @@ h2 {
 
 
 .templatemo-content {
-    position: static;
     overflow: hidden; 
-    margin-top: 40%;
+    margin-top: 20rem;
     padding-bottom: 6%;
 }
 
