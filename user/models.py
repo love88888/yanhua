@@ -1,8 +1,11 @@
 from django.db import models
 
+import time
 # Create your models here.
 
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.hashers import make_password
+
 
 SEX_CHOICES = [
     (0,'秘密'),
@@ -28,7 +31,9 @@ class User(AbstractUser):
 	def __str__(self):
 		return self.username
 
-
+	def save(self,*args,**kwargs):
+		self.password = make_password(self.password)
+		super().save(*args,**kwargs)
 	# | id                   | int(11)          | NO   | PRI | NULL     | auto_increment |
 	# | password      | varchar(128) | NO   |     | NULL       |                           |
 	# | last_login      | datetime(6)   | YES  |     | NULL       |                           |	最后登录时间
