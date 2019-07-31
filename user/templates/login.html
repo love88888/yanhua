@@ -1,0 +1,42 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>YanHua-Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link href={% static "user/css/login.css" %} rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+<!-- main -->
+<div class="main-w3layouts wrapper">
+	<div class="main-agileinfo">
+		<div class="agileits-top">
+			<form action={% url 'login' %} method="post">
+				{% csrf_token %}
+				<input class="text" type="text" name="username" title="2到20位字母,数字,_" pattern="^\w{2,20}$" placeholder="姓名" required>
+				<input class="text" type="password" name="password" title="6到20位字母,数字,特殊字符,不含空格" pattern="^\S{6,20}$" placeholder="密码" required>
+				<div class="wthree-text"> 
+					<ul> 
+						<li>
+							<label class="anim">
+								<input type="checkbox" name="savelogin" pattern="save" value="save" class="checkbox">
+								<span> 记住密码 ?</span> 
+							</label> 
+						</li>
+						<li><a href="#">忘记密码 ?</a> </li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<input type="hidden" name="next" value="{{ next }}">
+				<input type="submit" value="登录">
+			</form>
+			<!-- <p>创建一个账号? <a href="#"> 立即登录!</a></p> -->
+		</div>	 
+	</div>
+</body>
+</html>
+
