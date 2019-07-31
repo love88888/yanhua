@@ -1,50 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YH-video</title>
-    <link href="http://vjs.zencdn.net/5.5.3/video-js.css" rel="stylesheet">
-    <script src="http://vjs.zencdn.net/5.5.3/video.js"></script>
-<style>
-    div {
-        margin: 30px auto;
-        text-align: center;
-    }
-    /* #example_video_1{
-        width: 500px;
-        height: 900px;
-    } */
+<meta charset="utf-8" />
+<title>YanHua-heck</title>
+<style type="text/css">
+/*basic reset*/
+* {margin: 0; padding: 0;}
+/*adding a black bg to the body to make things clearer*/
+body {background: black;}
+canvas {display: block;}
 </style>
 </head>
 <body>
-    <div>
-        <video id="example_video_1" controls preload="none"
-            poster="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1562077997&di=4ee17c7582571199e1db8a3db8cd2aae&src=http://b-ssl.duitang.com/uploads/item/201702/05/20170205203648_W8CLd.jpeg">
-            <source src="rtmp://118.25.150.137/live/wei" type="rtmp/flv">
-        </video>    
-    </div>
-<script>
-    // var player = videojs('example_video_1',{
-    //     muted: true,
-    //     controls : true/false,      
-    //     loop : true,
-    //     // 更多配置.....
-    // });
-    var options = {};
- 
-var player = videojs('example_video_1', options, function onPlayerReady() {
-  videojs.log('播放器已经准备好了!');
- 
-  // In this context, `this` is the player that was created by Video.js.<br>  // 注意，这个地方的上下文， `this` 指向的是Video.js的实例对像player
-  this.play();
- 
-  // How about an event listener?<br>  // 如何使用事件监听？
-  this.on('ended', function() {
-    videojs.log('播放结束了!');
-  });
-});
+<canvas id="c"></canvas>
+<script type="text/javascript">
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+var chinese = "我们共同为建站事业而奋斗！";
+chinese = chinese.split("");
+
+var font_size = 10;
+var columns = c.width/font_size;
+//an array of drops - one per column
+var drops = [];
+for(var x = 0; x < columns; x++)
+	drops[x] = 1; 
+//drawing the characters
+function draw()
+{
+	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+	ctx.fillRect(0, 0, c.width, c.height);
+	
+	ctx.fillStyle = "#0F0"; //green text
+	ctx.font = font_size + "px arial";
+	//looping over drops
+	for(var i = 0; i < drops.length; i++)
+	{
+		var text = chinese[Math.floor(Math.random()*chinese.length)];
+		ctx.fillText(text, i*font_size, drops[i]*font_size);
+		
+		if(drops[i]*font_size > c.height && Math.random() > 0.975)
+			drops[i] = 0;
+		
+	drops[i]++;
+	}
+}
+setInterval(draw, 33);
 </script>
 </body>
 </html>
